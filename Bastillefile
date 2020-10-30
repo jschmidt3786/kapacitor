@@ -21,9 +21,9 @@
 PKG kapacitor
 
 #Start needed services at boot time
-SYSRC kapacitor_enable=YES
+SYSRC kapacitord_enable=YES
 
 # Start the service immediately
-SERVICE kapacitor start
+SERVICE kapacitord start
 
 
