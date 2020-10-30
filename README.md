@@ -1,15 +1,18 @@
+## Status
+
+## kapacitor
 Bastille Template to add a kapacitor server to a Jail
 
 ## Bootstrap
 
 ```shell
-# bastille bootstrap https:// gitserv / namespace /kapacitor
+bastille bootstrap https://github.com/jschmidt3786/kapacitor
 ```
 
 ## Usage
 
 ```shell
-# bastille template TARGET XX/kapacitor
+bastille template TARGET jschmidt3786/kapacitor
 ```
 
 ## Post Install

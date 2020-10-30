@@ -1,5 +1,21 @@
 # Kapacitor server Bastille Jail Template
-# version 1.0  2020-10-29
+# version 0.1.0  2020-10-29
+
+# SUPPORTED 	format 	example
+# LIMITS 	resource value 	memoryuse 1G
+# INCLUDE 	template path/URL 	http?://TEMPLATE_URL or username/base-template
+# PRE 	/bin/sh command 	mkdir -p /usr/local/path
+# FSTAB 	fstab syntax 	/host/path container/path nullfs ro 0 0
+# PKG 	port/pkg name(s) 	vim-console zsh git-lite tree htop
+# OVERLAY 	paths (one/line) 	etc usr
+# SYSRC 	sysrc command(s) 	nginx_enable=YES
+# SERVICE 	service command(s) 	nginx restart
+# CMD 	/bin/sh command 	/usr/bin/chsh -s /usr/local/bin/zsh
+#
+# PLANNED 	format 	example
+# RDR 	pf rdr entry 	rdr pass inet proto tcp from any to any port 80 -> 10.17.89.80
+# LOG 	path 	/var/log/nginx/access.log
+
 
 # Install needed packages
 PKG kapacitor
@@ -7,7 +23,7 @@ PKG kapacitor
 #Start needed services at boot time
 SYSRC kapacitor_enable=YES
 
-# Start the tarsnap service immediately
+# Start the service immediately
 SERVICE kapacitor start
 
 
