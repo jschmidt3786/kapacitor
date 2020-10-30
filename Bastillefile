@@ -1,0 +1,13 @@
+# Kapacitor server Bastille Jail Template
+# version 1.0  2020-10-29
+
+# Install needed packages
+PKG kapacitor
+
+#Start needed services at boot time
+SYSRC kapacitor_enable=YES
+
+# Start the tarsnap service immediately
+SERVICE kapacitor start
+
+
